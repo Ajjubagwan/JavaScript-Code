@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Emp(id, name){
+        //     this.id=id;
+        //     this.name=name;
+        // }
+        // function PermanentEmp(id,name){
+        //     Emp.call(this,id,name);
+        // }
+        // document.write(new PermanentEmp(1,"ajay kumar").id);
+        // document.write(new PermanentEmp(1,"ajay kumar").name);
+
+
+        function Emp(id, name){
+            this.id=id;
+            this.name=name;
+        }
+
+        function PermanentEmp(id,name){
+            Emp.call(this,id,name);
+        }
+        function TemporaryEmp(id,name){
+            Emp.call(this,id,name);
+        }
+
+        var pEmp = new PermanentEmp(1, "Ajay kumar");
+        var tEMP = new TemporaryEMP(2,"ROHAN");
+
+        document.writeln(pEMP.id + " " + pEMp.name);
+        document.writeln(tEMP.id + " " + tEMp.name);
+
+
+
+
+    </script>
+</body>
+</html>
